@@ -1,0 +1,42 @@
+.section--reviews {
+  .section {
+    &__row {
+      margin-top: 30px;
+      @media (min-width: 992px) {
+        margin-top: 80px;
+        padding-bottom: 30px;
+      }
+    }
+    &__left {
+      img {
+        width: 148px;
+        height: 133px;
+      }
+      @media (min-width: 992px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .carousel {
+    margin-bottom: 30px;
+    @media (max-width: 992px) {
+      margin-top: 40px;
+    }
+    &__title {
+      font-family: Inter;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      text-align: left;
+    }
+    &__name {
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      text-align: left;
+    }
+  }
+}

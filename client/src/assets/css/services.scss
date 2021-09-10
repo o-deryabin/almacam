@@ -1,0 +1,53 @@
+.section--services {
+  .section {
+    &__row {
+      margin-top: 30px;
+      @media (min-width: 992px) {
+        margin-top: 80px;
+        padding-bottom: 20px;
+      }
+    }
+    &__col {
+      &-title {
+        font-family: Inter;
+        font-weight: 600;
+
+        font-size: 19px;
+        line-height: 29px;
+
+        color: #000000;
+        @media (min-width: 576px) {
+          font-size: 23px;
+          line-height: 35px;
+        }
+
+        @media (min-width: 992px) {
+          font-weight: 500;
+          font-size: 35px;
+          line-height: 42px;
+        }
+      }
+      &-description {
+        font-family: Inter;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        color: #000000;
+        margin-left: auto;
+        @media (min-width: 576px) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        @media (max-width: 576px) {
+          margin-top: 20px;
+        }
+      }
+    }
+    &__button {
+      @media (min-width: 992px) {
+        margin-top: 80px;
+      }
+    }
+  }
+}

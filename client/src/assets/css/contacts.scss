@@ -1,0 +1,47 @@
+.section--contacts {
+  margin-bottom: 50px;
+  @media (min-width: 992px) {
+    margin-bottom: 80px;
+  }
+  .section {
+    &__content {
+      @media (min-width: 992px) {
+        margin-top: 80px;
+      }
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        font-family: Inter;
+        font-weight: 600;
+
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #000000;
+        text-decoration: none;
+
+        font-size: 24px;
+        @media (min-width: 576px) {
+          font-size: 36px;
+        }
+        @media (min-width: 992px) {
+          font-size: 41px;
+        }
+      }
+    }
+    &__right {
+    }
+    &__input {
+      input {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        border-color: #000000;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

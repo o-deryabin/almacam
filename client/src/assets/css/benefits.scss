@@ -1,0 +1,36 @@
+.section--benefits {
+  background-image: url("../image/benefits/background.jpg");
+  background-size: cover;
+
+  padding: 50px 0 50px;
+  @media (min-width: 992px) {
+    padding: 120px 0 400px;
+  }
+  .section {
+    &__title {
+      font-family: Oswald;
+      font-weight: 500;
+      font-size: 41px;
+      line-height: 61px;
+      text-transform: uppercase;
+    }
+  }
+  .carousel {
+    margin-top: 30px;
+    &-item {
+      height: 130px;
+
+      p {
+        text-align: left;
+      }
+    }
+    &__title {
+      font-family: Inter;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+}

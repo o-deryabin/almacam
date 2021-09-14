@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/image/almacam.png";
+import { CustomModal } from "./Modal";
 
 export const Header = () => {
   const [links] = useState([
@@ -21,6 +22,11 @@ export const Header = () => {
     },
   ]);
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const listLinks = links.map((link, i) => (
     <a href={link.link} key={i}>
       {link.title}
@@ -31,9 +37,11 @@ export const Header = () => {
     <header className="header">
       <img src={logo} alt="logo" className="header__logo" />
       <nav className="header__links">{listLinks}</nav>
-      <button type="button" className="button">
+      <button type="button" className="button" onClick={handleShow}>
         Заказать консультацию
       </button>
+
+      <CustomModal show={show} handleClose={handleClose} />
     </header>
   );
 };

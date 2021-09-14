@@ -1,7 +1,7 @@
 .section--main {
   .section {
     &__conatiner {
-      background-image: url("../image/main/backgound.jpg");
+      background-image: url("../image/main/backgound.webp");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -15,6 +15,7 @@
       }
     }
     &__title {
+      font-family: Inter;
       @media (min-width: 576px) {
         font-size: 44px;
         line-height: 56px;
@@ -26,6 +27,7 @@
       }
     }
     &__description {
+      font-family: Inter;
       margin: 20px 0;
       font-size: 14px;
       line-height: 24px;

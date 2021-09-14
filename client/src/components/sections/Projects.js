@@ -4,8 +4,10 @@ import { Heading } from "../common/Headeing";
 import Slider from "react-slick";
 import { NextSvg } from "../common/svg/NextSvg";
 import { PrevSvg } from "../common/svg/PrevSvg";
-import image1 from "../../assets/image/projects/projects1.jpg";
-import image2 from "../../assets/image/projects/projects2.jpg";
+import image1 from "../../assets/image/projects/projects1.webp";
+import image2 from "../../assets/image/projects/projects2.webp";
+import image3 from "../../assets/image/projects/projects3.webp";
+import image4 from "../../assets/image/projects/projects4.webp";
 
 export const Projects = () => {
   const [slides] = useState([
@@ -24,13 +26,13 @@ export const Projects = () => {
       title: "Рынок Алтын Орда.",
       description:
         "Установлено 24 камеры. Установлены датчики на движение. Также ночное освещение. ",
-      image: image1,
+      image: image3,
     },
     {
       title: "Завод Ademi Qala.",
       description:
         "Установлено 90 камер. Освещение на всей территории. Датчики движения. Входная группа. Шлагбаум для внутренней парковки. ",
-      image: image1,
+      image: image4,
     },
   ]);
 

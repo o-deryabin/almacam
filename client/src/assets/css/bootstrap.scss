@@ -24,6 +24,11 @@
   background-color: #000;
   padding: 15px 30px;
   border: none;
+  transition: 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
 .divider {

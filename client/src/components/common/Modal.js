@@ -33,6 +33,13 @@ export const CustomModal = ({ show, handleClose }) => {
 
       axios.post("/api/email/send", { ...form });
 
+      setValidated(false);
+
+      setForm({
+        firstname: "",
+        tel: "",
+      });
+
       handleClose();
     } catch (e) {
       console.log(e);

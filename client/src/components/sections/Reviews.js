@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Heading } from "../common/Headeing";
 import { NextSvg } from "../common/svg/NextSvg";
 import { PrevSvg } from "../common/svg/PrevSvg";
-import image from "../../assets/image/reviews/reviews.png";
+import image from "../../assets/image/reviews/reviews_2.png";
 import Slider from "react-slick";
 
 export const Reviews = () => {

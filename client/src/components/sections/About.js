@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import image from "../../assets/image/about/background.jpg";
+import image from "../../assets/image/about/background.webp";
 
 import { Heading } from "../common/Headeing";
 

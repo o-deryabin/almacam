@@ -33,6 +33,13 @@ export const Contacts = () => {
       setValidated(true);
 
       axios.post("/api/email/send", { ...form });
+
+      setValidated(false);
+
+      setForm({
+        firstname: "",
+        tel: "",
+      });
     } catch (e) {
       console.log(e);
     }
@@ -44,9 +51,15 @@ export const Contacts = () => {
         <Heading subtitle="Контакты" title="" titleRed="Алмакам" />
         <Row className="section__content">
           <Col md="7" className="section__left">
-            <a href="tel:+77086020682">+7 708 602 0682</a>
-            <a href="mailto:222@almacam.kz">222@almacam.kz</a>
-            <a href="tel:+77777777777">Whatsapp</a>
+            <div>
+              <a href="tel:+77086020682">+7 708 602 0682</a>
+            </div>
+            <div>
+              <a href="mailto:222rix@gmail.com">222rix@gmail.com</a>
+            </div>
+            <div>
+              <a href="https://wa.me/77086020682">Whatsapp</a>
+            </div>
           </Col>
           <Col md="5" className="section__right">
             <Form noValidate validated={validated} onSubmit={sendForm}>

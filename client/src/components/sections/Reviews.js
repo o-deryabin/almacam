@@ -70,7 +70,7 @@ export const Reviews = () => {
   };
 
   return (
-    <section className="section section--reviews">
+    <section className="section section--reviews" id="reviews">
       <Container>
         <Heading subtitle="Отзывы" title="доверьтесь нам!" titleRed="Алмакам" />
         <Row className="section__row">

@@ -10,7 +10,7 @@ router.post("/send", async (req, res) => {
     }
 
     const message = {
-      to: "olegderyabin22@gmail.com", // list of receivers
+      to: "olegderyabin22@gmail.com,  vassilyev.com@gmail.com", // list of receivers
       subject: "Новая заявка!!!", // Subject line
       text: `Данные человека
 
@@ -21,8 +21,6 @@ router.post("/send", async (req, res) => {
 
     mailer(message);
 
-    console.log(req.body);
-
     res.status(200).json({ message: "Заявка отправлена" });
   } catch (e) {
     console.log(e);
@@ -31,6 +29,3 @@ router.post("/send", async (req, res) => {
 });
 
 module.exports = router;
-
-//mail.almacam.kz@gmail.com
-//mEw2Qr4@b&xZ)kT8mB!1

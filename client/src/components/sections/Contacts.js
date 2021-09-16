@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Row, Col, Form, FloatingLabel } from "react-bootstrap";
+import Toast from "react-bootstrap/Toast";
 import { Heading } from "../common/Headeing";
 import axios from "axios";
 
 export const Contacts = () => {
+  //form state
   const [form, setForm] = useState({
     firstname: "",
     tel: "",
   });
 
+  //validate state
   const [validated, setValidated] = useState(false);
+
+  //toast state
+  const [showA, setShowA] = useState(false);
+
+  const [toastText, setToastText] = useState("");
+
+  const toggleShowA = () => setShowA(!showA);
 
   const changeHandler = (event) => {
     setForm({
@@ -19,7 +29,7 @@ export const Contacts = () => {
     });
   };
 
-  const sendForm = (event) => {
+  const sendForm = async (event) => {
     try {
       event.preventDefault();
       const formButton = event.currentTarget;
@@ -32,7 +42,7 @@ export const Contacts = () => {
 
       setValidated(true);
 
-      axios.post("/api/email/send", { ...form });
+      const res = await axios.post("/api/email/send", { ...form });
 
       setValidated(false);
 
@@ -40,13 +50,16 @@ export const Contacts = () => {
         firstname: "",
         tel: "",
       });
+
+      setToastText(res.data.message);
+      toggleShowA();
     } catch (e) {
       console.log(e);
     }
   };
 
   return (
-    <section className="section section--contacts">
+    <section className="section section--contacts" id="contacts">
       <Container>
         <Heading subtitle="Контакты" title="" titleRed="Алмакам" />
         <Row className="section__content">
@@ -97,6 +110,12 @@ export const Contacts = () => {
             </Form>
           </Col>
         </Row>
+        <Toast show={showA} onClose={toggleShowA}>
+          <Toast.Header>
+            <strong className="me-auto">Almacam</strong>
+          </Toast.Header>
+          <Toast.Body>{toastText}</Toast.Body>
+        </Toast>
       </Container>
     </section>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/image/almacam.png";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 import { Burger } from "./svg/Burger";
 import { CustomModal } from "./Modal";
 
@@ -41,9 +42,9 @@ export const HeaderMobile = () => {
   };
 
   const listLinks = links.map((link, i) => (
-    <a href={link.link} key={i}>
+    <Nav.Link href={link.link} key={i} onClick={handleCloseCanvas}>
       {link.title}
-    </a>
+    </Nav.Link>
   ));
 
   return (
@@ -58,7 +59,7 @@ export const HeaderMobile = () => {
         <Offcanvas placement="end" show={showCanvas} onHide={handleCloseCanvas}>
           <Offcanvas.Header closeButton></Offcanvas.Header>
           <Offcanvas.Body>
-            <nav className="header--mobile__links">{listLinks}</nav>
+            <Nav className="header--mobile__links">{listLinks}</Nav>
             <button type="button" className="button" onClick={openModal}>
               Заказать консультацию
             </button>

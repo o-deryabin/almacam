@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Element } from "react-scroll";
 import { Divider } from "../common/Divider";
 import { Heading } from "../common/Headeing";
 import { CustomModal } from "../common/Modal";
@@ -53,6 +54,7 @@ export const Services = () => {
 
   return (
     <section className="section section--services" id="services">
+      <Element name="services"></Element>
       <Container className="section__conatiner">
         <Heading
           subtitle="Услуги"

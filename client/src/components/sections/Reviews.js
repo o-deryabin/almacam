@@ -5,6 +5,7 @@ import { NextSvg } from "../common/svg/NextSvg";
 import { PrevSvg } from "../common/svg/PrevSvg";
 import image from "../../assets/image/reviews/reviews_2.png";
 import Slider from "react-slick";
+import { Element } from "react-scroll";
 
 export const Reviews = () => {
   const [carouselItems] = useState([
@@ -71,6 +72,7 @@ export const Reviews = () => {
 
   return (
     <section className="section section--reviews" id="reviews">
+      <Element name="reviews"></Element>
       <Container>
         <Heading subtitle="Отзывы" title="доверьтесь нам!" titleRed="Алмакам" />
         <Row className="section__row">

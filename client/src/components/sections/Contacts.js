@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import Toast from "react-bootstrap/Toast";
+import { Element } from "react-scroll";
 import { Heading } from "../common/Headeing";
 import axios from "axios";
 
@@ -60,6 +61,7 @@ export const Contacts = () => {
 
   return (
     <section className="section section--contacts" id="contacts">
+      <Element name="contacts"></Element>
       <Container>
         <Heading subtitle="Контакты" title="" titleRed="Алмакам" />
         <Row className="section__content">

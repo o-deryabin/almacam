@@ -4,6 +4,7 @@ import "./App.css";
 import { Footer } from "./components/common/Footer";
 import { Header } from "./components/common/Header";
 import { HeaderMobile } from "./components/common/HeaderMobile";
+import { WhatsAppBtn } from "./components/common/WhatsAppBtn";
 import { About } from "./components/sections/About";
 import { Benefits } from "./components/sections/Benefits";
 import { Contacts } from "./components/sections/Contacts";
@@ -26,6 +27,7 @@ function App() {
       <Reviews />
       <Benefits />
       <Contacts />
+      <WhatsAppBtn />
       <Footer />
     </div>
   );

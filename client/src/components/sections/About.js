@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Element } from "react-scroll";
 import image from "../../assets/image/about/background.webp";
 
 import { Heading } from "../common/Headeing";
@@ -7,6 +8,7 @@ import { Heading } from "../common/Headeing";
 export const About = () => {
   return (
     <section className="section section--about" id="about">
+      <Element name="about"></Element>
       <Container className="section__container">
         <Heading subtitle="О нас" title="команда" titleRed="Надежная" />
         <Row className="section__row">

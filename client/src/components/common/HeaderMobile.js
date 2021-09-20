@@ -2,27 +2,27 @@ import React, { useState } from "react";
 import logo from "../../assets/image/almacam.png";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import { Burger } from "./svg/Burger";
 import { CustomModal } from "./Modal";
+import { Link } from "react-scroll";
 
 export const HeaderMobile = () => {
   const [links] = useState([
     {
       title: "Услуги",
-      link: "#services",
+      link: "services",
     },
     {
       title: "О нас",
-      link: "#about",
+      link: "about",
     },
     {
       title: "Отзывы",
-      link: "#reviews",
+      link: "reviews",
     },
     {
       title: "Kонтакты",
-      link: "#contacts",
+      link: "contacts",
     },
   ]);
 
@@ -42,9 +42,17 @@ export const HeaderMobile = () => {
   };
 
   const listLinks = links.map((link, i) => (
-    <Nav.Link href={link.link} key={i} onClick={handleCloseCanvas}>
+    <Link
+      to={link.link}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={800}
+      key={i}
+      onClick={handleCloseCanvas}
+    >
       {link.title}
-    </Nav.Link>
+    </Link>
   ));
 
   return (
@@ -59,7 +67,7 @@ export const HeaderMobile = () => {
         <Offcanvas placement="end" show={showCanvas} onHide={handleCloseCanvas}>
           <Offcanvas.Header closeButton></Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="header--mobile__links">{listLinks}</Nav>
+            <nav className="header--mobile__links">{listLinks}</nav>
             <button type="button" className="button" onClick={openModal}>
               Заказать консультацию
             </button>

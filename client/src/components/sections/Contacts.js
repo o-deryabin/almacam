@@ -9,6 +9,7 @@ import axios from "axios";
 export const Contacts = () => {
   //form state
   const [form, setForm] = useState({
+    site: "almacam",
     firstname: "",
     tel: "",
   });
@@ -43,7 +44,9 @@ export const Contacts = () => {
 
       setValidated(true);
 
-      const res = await axios.post("/api/email/send", { ...form });
+      const res = await axios.post("https://vass.kz/api/user/send", {
+        ...form,
+      });
 
       setValidated(false);
 

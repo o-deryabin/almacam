@@ -7,6 +7,7 @@ import axios from "axios";
 export const CustomModal = ({ show, handleClose }) => {
   //form state
   const [form, setForm] = useState({
+    site: "almacam",
     firstname: "",
     tel: "",
   });
@@ -41,7 +42,9 @@ export const CustomModal = ({ show, handleClose }) => {
 
       setValidated(true);
 
-      const res = await axios.post("/api/email/send", { ...form });
+      const res = await axios.post("https://vass.kz/api/user/send", {
+        ...form,
+      });
 
       setValidated(false);
 

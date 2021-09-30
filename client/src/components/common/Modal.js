@@ -42,13 +42,14 @@ export const CustomModal = ({ show, handleClose }) => {
 
       setValidated(true);
 
-      const res = await axios.post("https://vass.kz/api/user/send", {
+      const res = await axios.post("/api/user/send", {
         ...form,
       });
 
       setValidated(false);
 
       setForm({
+        site: "almacam",
         firstname: "",
         tel: "",
       });
